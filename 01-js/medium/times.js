@@ -9,5 +9,19 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
-    return 0.01;
+    let cnt = 0;
+    let startTime = new Date().getTime();
+    for(let i = 0; i < n; i++){
+        cnt += i;
+    }
+    let endTime = new Date().getTime();
+    return (endTime-startTime)/1000;
 }
+console.log("a:"+calculateTime(10));
+console.log("b:"+calculateTime(100));
+console.log("c:"+calculateTime(1000));
+console.log("d:"+calculateTime(10000));
+console.log("e:"+calculateTime(100000));
+console.log("f:"+calculateTime(10000000));
+console.log("g:"+calculateTime(10000000));
+console.log("h:"+calculateTime(10000000000000));
